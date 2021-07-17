@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <NuxtLink to="/" class="logo"> Afroterps </NuxtLink>
+  <header :class="overlay ? 'overlay' : ''">
+    <NuxtLink to="/" class="logo"> <img class="logo__image" src="~assets/svgs/logo.svg" alt="afroterps"> </NuxtLink>
 
     <nav :class="expanded ? 'nav nav--expanded' : 'nav'">
       <ul class="nav__menu">
@@ -9,7 +9,7 @@
         </li>
 
         <li class="nav__item">
-          <NuxtLink to="/" class="nav__link"> Join Community </NuxtLink>
+          <NuxtLink to="/join" class="nav__link"> Join Community </NuxtLink>
         </li>
 
         <li class="nav__item">
@@ -18,7 +18,10 @@
       </ul>
     </nav>
 
-    <button :class="expanded ? 'hamburger hamburger--expanded' : 'hamburger' " @click="toggleMenu()">
+    <button
+      :class="expanded ? 'hamburger hamburger--expanded' : 'hamburger'"
+      @click="toggleMenu()"
+    >
       <span class="hamburger__bar hamburger__bar--one"></span>
       <span class="hamburger__bar hamburger__bar--two"></span>
       <span class="hamburger__bar hamburger__bar--three"></span>
@@ -27,8 +30,12 @@
 </template>
 
 <script>
+// import Logo from './Logo.vue'
 export default {
   name: 'Header',
+  components: {
+    // Logo
+  },
   data() {
     return {
       expanded: false,
@@ -40,6 +47,12 @@ export default {
       this.expanded = !this.expanded
     },
   },
+
+  computed: {
+    overlay () {
+      return this.$route.name === 'index'
+    },
+  },
 }
 </script>
 
@@ -48,14 +61,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 5%;
-  position: sticky;
+  padding: 0.2rem 5%;
+  z-index: 8;
+  box-shadow: 0 2px 12px 0 rgb(36 50 66 / 8%);
 
   .logo {
     font-size: 1.5rem;
-    color: #333333;
+    color: #442f2e;
     text-decoration: none;
     z-index: 10;
+  }
+
+  .logo__image {
+    width: 120px;
+    height: auto;
   }
 
   .nav__menu {
@@ -83,6 +102,7 @@ header {
 
   .nav__link {
     text-decoration: none;
+    color: #442f2e;
   }
 
   .hamburger {
@@ -100,7 +120,7 @@ header {
     &__bar {
       width: 1.7rem;
       height: 2px;
-      background: #333333;
+      background: #442f2e;
       margin: 0.12rem 0;
 
       &--two {
@@ -156,7 +176,7 @@ header {
   }
 
   .nav--expanded {
-    transition: all linear 0.3s ;
+    transition: all linear 0.3s;
 
     @media screen and (max-width: 600px) {
       z-index: 5;
@@ -166,8 +186,26 @@ header {
     }
 
     .nav__item {
-      transition: all linear 0.4s ;
+      transition: all linear 0.4s;
       transform: translateY(0);
+    }
+  }
+}
+
+.overlay {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .logo, .nav__link {
+    color: #C08F3D;
+
+    &:hover {
+      color: #333333;
     }
   }
 }

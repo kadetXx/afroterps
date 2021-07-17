@@ -1,12 +1,12 @@
 <template>
   <footer>
-    <span>Copyright {{ date }} Afroterps</span>
+    <span>&#169; Copyright {{ date }}, Afroterps</span>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'footer',
+  name: 'Footer',
   data() {
     return {
       date: (new Date()).getFullYear()
@@ -21,7 +21,7 @@ footer {
   place-items: center;
   background: #442f2e;
   color: #ffff;
-  padding: 0.5rem 5%;
+  padding: 1rem 5%;
   margin-top: auto;
 }
 </style>
