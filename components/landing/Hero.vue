@@ -18,8 +18,8 @@
       </a>
     </div> -->
 
-    <button class="hero__button">
-      <span class="material-icons"> south </span>
+    <button class="hero__button" @click="scroll">
+      <span class="material-icons hero__button-icon"> south </span>
     </button>
   </div>
 </template>
@@ -27,6 +27,11 @@
 <script>
 export default {
   name: 'Hero',
+  methods: {
+    scroll() {
+      window.scrollY = window.innerHeight
+    }
+  }
 }
 </script>
 
@@ -78,6 +83,37 @@ export default {
     color: #ffd792;
     position: absolute;
     bottom: 2rem;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__button-icon {
+    animation-name: bounce;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+
+    25% {
+      transform: translateY(-5px);
+    }
+
+    50% {
+      transform: translateY(0);
+    }
+
+    75% {
+      transform: translateY(5px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 }
 </style>
