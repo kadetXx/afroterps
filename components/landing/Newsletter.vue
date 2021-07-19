@@ -35,6 +35,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   background: #efefef;
+  background: linear-gradient(0deg, rgba(239,239,239,1) 66%, rgba(255,255,255,1) 100%);
   padding: 4rem 5%;
 }
 

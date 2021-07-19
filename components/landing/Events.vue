@@ -94,6 +94,10 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
+
   .title {
     width: 100%;
     text-align: left;
@@ -105,7 +109,8 @@ export default {
     margin: 0;
 
     @media screen and (max-width: 600px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      text-align: center;
     }
   }
 
@@ -114,6 +119,12 @@ export default {
     color: #432e2d;
     opacity: 0.6;
     margin: 0.7rem 0;
+  }
+
+  .slider {
+    @media screen and (max-width: 600px) {
+      margin: 3.5rem 0;
+    }
   }
 
   .slider__item {
@@ -138,6 +149,9 @@ export default {
   .control {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 600px) {
+      justify-content: center;
+    }
   }
 
   .control__button {
@@ -150,6 +164,11 @@ export default {
     place-items: center;
     margin-right: 1rem;
     transition: all 0.2s linear;
+
+    @media screen and (max-width: 600px) {
+      height: 3rem;
+      padding: 0 0.3rem;
+    }
 
     &:hover {
       color: #fff;
