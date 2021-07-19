@@ -1,6 +1,8 @@
 <template>
   <header :class="overlay ? 'overlay' : ''">
-    <NuxtLink to="/" class="logo"> <img class="logo__image" src="~assets/svgs/logo.svg" alt="afroterps"> </NuxtLink>
+    <NuxtLink to="/" class="logo">
+      <img class="logo__image" src="~assets/svgs/logo.svg" alt="afroterps" />
+    </NuxtLink>
 
     <nav :class="expanded ? 'nav nav--expanded' : 'nav'">
       <ul class="nav__menu">
@@ -9,11 +11,13 @@
         </li>
 
         <li class="nav__item">
-          <NuxtLink to="/join" class="nav__link"> Join Community </NuxtLink>
+          <NuxtLink to="/community" class="nav__link">
+            Join Community
+          </NuxtLink>
         </li>
 
         <li class="nav__item">
-          <NuxtLink to="/" class="nav__link"> Contact Us </NuxtLink>
+          <NuxtLink to="/contact" class="nav__link"> Contact Us </NuxtLink>
         </li>
       </ul>
     </nav>
@@ -30,27 +34,33 @@
 </template>
 
 <script>
-// import Logo from './Logo.vue'
 export default {
   name: 'Header',
-  components: {
-    // Logo
-  },
   data() {
     return {
       expanded: false,
     }
   },
 
-  methods: {
-    toggleMenu: function name() {
-      this.expanded = !this.expanded
+  computed: {
+    overlay() {
+      return this.$route.name === 'index'
     },
   },
 
-  computed: {
-    overlay () {
-      return this.$route.name === 'index'
+  watch: {
+    expanded() {
+      if (this.expanded) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'auto'
+      }
+    },
+  },
+
+  methods: {
+    toggleMenu: function name() {
+      this.expanded = !this.expanded
     },
   },
 }
@@ -61,20 +71,27 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.2rem 5%;
+  padding: 1rem 5%;
   z-index: 8;
   box-shadow: 0 2px 12px 0 rgb(36 50 66 / 8%);
+  overflow: hidden;
 
   .logo {
     font-size: 1.5rem;
     color: #442f2e;
     text-decoration: none;
     z-index: 10;
+    display: flex;
+    align-items: center;
   }
 
   .logo__image {
     width: 120px;
     height: auto;
+
+    @media screen and (max-width: 600px) {
+      width: 90px;
+    }
   }
 
   .nav__menu {
@@ -103,6 +120,10 @@ header {
   .nav__link {
     text-decoration: none;
     color: #442f2e;
+
+    &:hover {
+      color: #8f713e;
+    }
   }
 
   .hamburger {
@@ -120,7 +141,7 @@ header {
     &__bar {
       width: 1.7rem;
       height: 2px;
-      background: #442f2e;
+      background: #c08f3d;
       margin: 0.12rem 0;
 
       &--two {
@@ -169,8 +190,9 @@ header {
       left: 0;
       right: 0;
       opacity: 0;
-      display: grid;
-      place-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       transform: translateY(-100vh);
     }
   }
@@ -201,11 +223,12 @@ header {
   left: 0;
   right: 0;
 
-  .logo, .nav__link {
-    color: #C08F3D;
+  .logo,
+  .nav__link {
+    color: #c08f3d;
 
     &:hover {
-      color: #333333;
+      color: #8f713e;
     }
   }
 }

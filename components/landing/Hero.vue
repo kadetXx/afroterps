@@ -1,7 +1,8 @@
 <template>
-  <div class="hero">
+  <div ref="hero" class="hero">
     <div class="hero__heading">
-      Africa's <b>Online</b> Platform for <b>professional</b> <b>Conference</b> Interpretations <b>services</b> and training.
+      Africa's <b>Online</b> Platform for <b>professional</b>
+      <b>Conference</b> Interpretations <b>services</b> and training.
     </div>
     <!-- <div class="hero__socials">
       <a href="/" class="hero__icon">
@@ -29,9 +30,12 @@ export default {
   name: 'Hero',
   methods: {
     scroll() {
-      window.scrollY = window.innerHeight
-    }
-  }
+      document.querySelector('.events').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      })
+    },
+  },
 }
 </script>
 
@@ -55,6 +59,16 @@ export default {
     color: #fff;
     font-weight: 400;
     padding: 0 5%;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 0 0%;
+
+      font-size: 1.5rem;
+    }
 
     b {
       font-weight: 600;
@@ -85,6 +99,10 @@ export default {
     bottom: 2rem;
     cursor: pointer;
     outline: none;
+
+    @media screen and (max-width: 600px) {
+      padding: 1.2rem 0.7rem;
+    }
   }
 
   &__button-icon {
@@ -92,6 +110,10 @@ export default {
     animation-duration: 0.7s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
 
   @keyframes bounce {

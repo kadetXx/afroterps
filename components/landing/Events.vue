@@ -5,13 +5,12 @@
     </div>
 
     <div class="slider">
-      <Slick :options="slickOptions" ref="slick">
-        <div class="slider__item"><a href="#"> </a></div>
-        <div class="slider__item"><a href="#"> </a></div>
-        <div class="slider__item"><a href="#"> </a></div>
-        <div class="slider__item"><a href="#"> </a></div>
-        <div class="slider__item"><a href="#"> </a></div>
-        <div class="slider__item"><a href="#"> </a></div>
+      <Slick ref="slick" :options="slickOptions">
+        <div v-for="slide in slides" :key="slide.id" class="slider__item">
+          <a class="slider__link" :href="slide.url">
+            <span>Coming Soon</span>
+          </a>
+        </div>
       </Slick>
     </div>
 
@@ -37,6 +36,14 @@ export default {
   },
   data() {
     return {
+      slides: [
+        { id: 1, url: '#' },
+        { id: 2, url: '#' },
+        { id: 3, url: '#' },
+        { id: 4, url: '#' },
+        { id: 5, url: '#' },
+        { id: 6, url: '#' },
+      ],
       slickOptions: {
         dots: false,
         arrows: false,
@@ -90,11 +97,16 @@ export default {
   .title {
     width: 100%;
     text-align: left;
+    margin: 0;
   }
 
   .title__heading {
-    font-size: 2rem;
-    margin-block: 0;
+    font-size: 1.8rem;
+    margin: 0;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
   }
 
   .title__subheading {
@@ -104,10 +116,6 @@ export default {
     margin: 0.7rem 0;
   }
 
-  .slider {
-    margin-top: 3rem;
-  }
-
   .slider__item {
     width: auto;
     height: 300px;
@@ -115,10 +123,21 @@ export default {
     border-right: 10px solid white;
   }
 
+  .slider__link {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 2000px 2000px #00000098;
+  }
+
   .control {
     display: flex;
     align-items: center;
-    margin-top: 3rem;
   }
 
   .control__button {
