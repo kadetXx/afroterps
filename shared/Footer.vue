@@ -23,5 +23,9 @@ footer {
   color: #ffff;
   padding: 1rem 5%;
   margin-top: auto;
+
+  span {
+    opacity: 0.7;
+  }
 }
 </style>
