@@ -6,18 +6,22 @@
 
     <nav :class="expanded ? 'nav nav--expanded' : 'nav'">
       <ul class="nav__menu">
-        <li class="nav__item">
-          <NuxtLink to="/" class="nav__link"> Home </NuxtLink>
+        <li class="nav__item" @click="toggleMenu()">
+          <NuxtLink to="/" class="nav__link">
+            Home
+          </NuxtLink>
         </li>
 
-        <li class="nav__item">
+        <li class="nav__item" @click="toggleMenu()">
           <NuxtLink to="/community" class="nav__link">
             Join Community
           </NuxtLink>
         </li>
 
-        <li class="nav__item">
-          <NuxtLink to="/contact" class="nav__link"> Contact Us </NuxtLink>
+        <li class="nav__item" @click="toggleMenu()">
+          <NuxtLink to="/contact" class="nav__link">
+            Contact Us
+          </NuxtLink>
         </li>
       </ul>
     </nav>
