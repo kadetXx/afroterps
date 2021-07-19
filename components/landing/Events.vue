@@ -132,6 +132,11 @@ export default {
     height: 300px;
     background: #432e2d;
     border-right: 10px solid white;
+
+    @media screen and (max-width: 600px) {
+      border-right: 5px solid white;
+      border-left: 5px solid white;
+    }
   }
 
   .slider__link {
