@@ -38,8 +38,6 @@
 </template>
 
 <script>
-import smoothscroll from 'smoothscroll-polyfill';
-
 export default {
   name: 'Header',
   data() {
@@ -62,10 +60,6 @@ export default {
         document.body.style.overflow = 'auto'
       }
     },
-  },
-
-  mounted() {
-    smoothscroll.polyfill();
   },
 
   methods: {
