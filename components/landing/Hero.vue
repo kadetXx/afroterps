@@ -2,23 +2,8 @@
   <div ref="hero" class="hero">
     <div class="hero__heading">
       Africa's <b>Online</b> Platform for <b>professional</b>
-      <b>Conference</b> Interpretations <b>services</b> and training.
+      <b>Conference</b> Interpreters.
     </div>
-    <!-- <div class="hero__socials">
-      <a href="/" class="hero__icon">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="/" class="hero__icon">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="/" class="hero__icon">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="/" class="hero__icon">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div> -->
-
     <button class="hero__button" @click="scroll">
       <span class="material-icons hero__button-icon"> south </span>
     </button>

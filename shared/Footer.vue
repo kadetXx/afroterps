@@ -9,9 +9,9 @@ export default {
   name: 'Footer',
   data() {
     return {
-      date: (new Date()).getFullYear()
+      date: new Date().getFullYear(),
     }
-  }
+  },
 }
 </script>
 
