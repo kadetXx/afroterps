@@ -12,14 +12,31 @@
       est laborum.
     </p>
 
-    <div class="cta">
-      <a class="cta__link" href="#">
-        <button class="cta__button">
-          Proceed To Telegram
-          <i class="fab fa-telegram-plane"></i>
-        </button>
-      </a>
-    </div>
+    <form class="form">
+      <label class="form__item">
+        <input
+          class="form__input"
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+      </label>
+
+      <label class="form__item">
+        <input
+          class="form__input"
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+      </label>
+      <button class="form__button">
+        Subscribe
+        <i class="fab fa-telegram-plane"></i>
+      </button>
+    </form>
   </div>
 </template>
 
@@ -66,36 +83,51 @@ export default {
   }
 }
 
-.cta {
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.cta__link {
-  width: 100%;
-  text-decoration: none;
-}
-
-.cta__button {
-  width: 40%;
-  padding: 1rem;
-  border-radius: 30px;
-  border: none;
-  background: #3bb3df;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
+.form {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     width: 100%;
   }
+}
 
-  i {
-    margin-left: 1rem;
+.form__item {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.form__input {
+  width: 100%;
+  border: 1px solid #916b367c;
+  padding: 0.9rem 1.5rem;
+  outline: none;
+  border-radius: 30px;
+  text-align: center;
+  color: #432e2dd3;
+
+  @media screen and (max-width: 600px) {
+    text-align: left;
   }
+
+  &::placeholder {
+    font-size: 1rem;
+    color: #916b36a2;
+  }
+}
+
+.form__button {
+  width: 100%;
+  outline: none;
+  padding: 0.9rem;
+  background: #52b75f;
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 </style>

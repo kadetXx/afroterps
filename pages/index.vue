@@ -2,20 +2,20 @@
   <div>
     <Hero />
     <Events />
-    <Newsletter />
+    <Socials />
   </div>
 </template>
 
 <script>
 import Hero from '@/components/landing/Hero.vue'
 import Events from '@/components/landing/Events.vue'
-import Newsletter from '@/components/landing/Newsletter.vue'
+import Socials from '~/components/landing/Socials.vue'
 
 export default {
   components: {
     Hero,
     Events,
-    Newsletter
+    Socials
   },
 }
 </script>

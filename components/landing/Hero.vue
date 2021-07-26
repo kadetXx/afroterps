@@ -60,20 +60,6 @@ export default {
     }
   }
 
-  &__socials {
-    margin-top: 1rem;
-  }
-
-  &__icon {
-    font-size: 2rem;
-    margin: 0 0.4rem;
-    color: #ffd792;
-
-    &:hover {
-      color: #442f2e;
-    }
-  }
-
   &__button {
     background: transparent;
     padding: 1.5rem 0.7rem;
