@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Afroterps website' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     link: [
       {
         rel: 'stylesheet',
@@ -61,6 +61,8 @@ export default {
     manifest: {
       lang: 'en',
     },
+
+    source: '~/static/icon.png',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -34,7 +34,7 @@ export default {
   position: relative;
   text-align: center;
   padding: 0 10%;
-  background: url('@/assets/images/conference-one.jpg');
+  background: url('@/assets/images/afroterps-bg.png');
   background-position: center;
   background-size: cover;
   box-shadow: inset 0 0 2000px 2000px #000000e3;
