@@ -12,13 +12,18 @@
       est laborum.
     </p>
 
-    <form class="form">
+    <form
+      class="form"
+      action="https://afroterps.us6.list-manage.com/subscribe/post?u=f2a143c3e66a5de9414518c65&amp;id=94f84e967f"
+      method="post"
+      target="_blank"
+    >
       <label class="form__item">
         <input
           class="form__input"
           type="text"
-          name="name"
-          placeholder="Your Name"
+          name="FNAME"
+          placeholder="Your First Name"
           required
         />
       </label>
@@ -27,12 +32,17 @@
         <input
           class="form__input"
           type="email"
-          name="email"
+          name="EMAIL"
           placeholder="Your Email"
           required
         />
       </label>
-      <button class="form__button">
+      <button
+        class="form__button"
+        type="submit"
+        value="Subscribe"
+        name="subscribe"
+      >
         Subscribe
         <i class="fab fa-telegram-plane"></i>
       </button>
@@ -41,8 +51,12 @@
 </template>
 
 <script>
+// import Form from './form.vue'
 export default {
   name: 'Join',
+  components: {
+    // Form,
+  },
 }
 </script>
 
