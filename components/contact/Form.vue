@@ -2,7 +2,7 @@
   <div class="contact">
     <h1 class="title">We're here</h1>
     <p class="subtitle">
-      Our door is always open to you dear colleagues, for a suggestion or
+      Our door is always open to you, dear colleagues, for a suggestion or
       comment.
     </p>
 
