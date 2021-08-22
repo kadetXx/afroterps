@@ -119,6 +119,7 @@ export default {
 .title {
   margin-bottom: 0;
   font-size: 1.7rem;
+
 }
 
 .subtitle {
