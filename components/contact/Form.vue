@@ -1,6 +1,10 @@
 <template>
   <div class="contact">
-    <h1 class="title">Contact Us</h1>
+    <h1 class="title">We're here</h1>
+    <p class="subtitle">
+      Our door is always open to you dear colleagues, for a suggestion or
+      comment.
+    </p>
 
     <form
       ref="form"
@@ -113,12 +117,19 @@ export default {
 }
 
 .title {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-bottom: 3rem;
+  color: #442f2e;
+  opacity: 0.9;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form__item {

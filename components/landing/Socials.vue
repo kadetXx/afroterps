@@ -8,13 +8,13 @@
     </div>
 
     <div class="socials__icons">
-      <a href="#">
+      <a href="https://facebook.com/afroterps" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="#">
+      <a href="https://twitter.com/afroterps" target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="#">
+      <a href="https://facebook.com/afroterps" target="_blank">
         <i class="fab fa-youtube"></i>
       </a>
     </div>
