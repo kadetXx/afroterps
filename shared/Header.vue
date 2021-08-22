@@ -14,7 +14,7 @@
 
         <li class="nav__item" @click="toggleMenu()">
           <NuxtLink to="/community" class="nav__link">
-            Join Community
+            Join The Community
           </NuxtLink>
         </li>
 
