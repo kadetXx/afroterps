@@ -14,7 +14,7 @@
       <a href="https://twitter.com/afroterps" target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://facebook.com/afroterps" target="_blank">
+      <a href="https://youtube.com/afroterps" target="_blank">
         <i class="fab fa-youtube"></i>
       </a>
     </div>

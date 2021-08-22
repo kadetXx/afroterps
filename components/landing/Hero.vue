@@ -1,7 +1,7 @@
 <template>
   <div ref="hero" class="hero">
     <div class="hero__heading">
-      Africa's Online Platform for professional Conference Interpreters.
+      Africa's Online Platform for Professional Conference Interpreters.
     </div>
     <button class="hero__button" @click="scroll">
       <span class="material-icons hero__button-icon"> south </span>
