@@ -118,12 +118,14 @@ export default {
 
 .title {
   margin-bottom: 0;
+  font-size: 1.7rem;
 }
 
 .subtitle {
   margin-bottom: 3rem;
   color: #442f2e;
   opacity: 0.9;
+  font-size: 1.2rem
 }
 
 .form {
