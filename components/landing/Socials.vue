@@ -8,13 +8,13 @@
     </div>
 
     <div class="socials__icons">
-      <a href="https://facebook.com/afroterps" target="_blank">
+      <a href="https://web.facebook.com/groups/353264166281462" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
       <a href="https://twitter.com/afroterps" target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://youtube.com/afroterps" target="_blank">
+      <a href="https://www.youtube.com/channel/UCp_-SIgiMYb1YDWhT0TH-tw/featured" target="_blank">
         <i class="fab fa-youtube"></i>
       </a>
     </div>
