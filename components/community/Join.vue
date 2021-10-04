@@ -4,7 +4,7 @@
 
     <p class="content">
       Afroterps is a platform for promoting the profession of conference
-      interpreting in Africa. We do this by bringing together profrssional
+      interpreting in Africa. We do this by bringing together professional
       conference interpreters of all ages from all over the continent to discuss
       issues relating to conference interpreting.
     </p>
